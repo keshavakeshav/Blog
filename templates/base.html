@@ -1,0 +1,240 @@
+New! Keyboard shortcuts … Drive keyboard shortcuts have been updated to give you first-letters navigation
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="shortcut icon" href="http://droitthemes.com/html/saasland/img/favicon.png" type="image/x-icon"> -->
+    <title>
+    {% block title %}
+
+    DevpyJp
+      
+    {% endblock title %}
+
+</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!--icon font css-->
+    <link rel="stylesheet" href="{% static 'vendor/themify-icons.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/flaticon.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animate.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel.min.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/all.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/style.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/jquery.mCustomScrollbar.min.css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/style(1).css ' %}">
+    <link rel="stylesheet" href="{% static 'vendor/responsive.css ' %}">
+
+
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+    
+    <div class="body_wrapper">
+        <header class="header_area navbar_fixed">
+            <nav class="navbar navbar-expand-lg menu_one menu_four">
+                <div class="container">
+                    <a class="navbar-brand sticky_logo" href="http://droitthemes.com/html/saasland/blog-list.html#"><img src="img/logo2.png" srcset="img/logo2x-2.png 2x" alt="logo"><img src="img/logo.png" srcset="img/logo2x.png 2x" alt=""></a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_toggle">
+                            <span class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="hamburger-cross">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                        <ul class="navbar-nav menu w_menu ml-auto mr-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'blog' %}">
+                                    Home
+                                </a></li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">
+                                    About Us
+                                </a></li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">
+                                    Contact Us
+                                </a></li>
+
+                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">
+                                        Blog
+                                    </a></li>
+
+
+                                {% if request.user.is_authenticated %}
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        {{request.user.first_name}}
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'logout' %}">
+                                        logout
+                                    </a>
+                                </li>
+                                    
+                                {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'signup' %}">
+                                        Sign Up
+                                    </a></li>
+                                
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'login' %}">
+                                            Login
+                                        </a></li>
+
+                                    {% endif %}
+
+                                        
+
+                        </ul>
+                        <!-- <a class="btn_get btn_hover" href="http://droitthemes.com/html/saasland/blog-list.html#get-app">Sign Up</a> -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+        {% block content %}
+
+
+
+          
+        {% endblock content %}
+
+
+        <footer class="footer_area footer_area_four f_bg">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget">
+                                <a href="http://droitthemes.com/html/saasland/index.html" class="f-logo"><img src="img/logo.png" srcset="img/logo2x.png 2x" alt=""></a>
+                                <div class="widget-wrap">
+                                    <p class="f_400 f_p f_size_15 mb-0 l_height34"><span>Email:</span> <a href="mailto:saasland@gmail.com" class="f_400">saasland@gmail.com</a></p>
+                                    <p class="f_400 f_p f_size_15 mb-0 l_height34"><span>Phone:</span> <a href="tel:948256347968" class="f_400">+948 256 347 968</a></p>
+                                </div>
+                                <form action="http://droitthemes.com/html/saasland/blog-list.html#" class="f_subscribe mailchimp" method="post" novalidate="true">
+                                    <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                    <button class="btn btn-submit" type="submit"><i class="ti-arrow-right"></i></button>
+                                    <p class="mchimp-errmessage" style="display: none;"></p>
+                                    <p class="mchimp-sucmessage" style="display: none;"></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_40">
+                                <h3 class="f-title f_600 t_color f_size_18 mb_40">About Us</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Company</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Leadership</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Diversity</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Jobs</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Press</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Wavelength</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget">
+                                <h3 class="f-title f_600 t_color f_size_18 mb_40">Workflow Solutions</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Project Management</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Agile</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Task Management</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Reporting</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Work Tracking</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">See All Uses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget">
+                                <h3 class="f-title f_600 t_color f_size_18 mb_40">Team Solutions</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Engineering</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Designers</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Sales</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Developers</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Marketing</a></li>
+                                    <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">See All Teams</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-5 col-sm-6">
+                            <p class="mb-0 f_400">Copyright © 2021</a></p>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-sm-6">
+                            <div class="f_social_icon_two text-center">
+                                <a href="http://droitthemes.com/html/saasland/blog-list.html#"><i class="ti-facebook"></i></a>
+                                <a href="http://droitthemes.com/html/saasland/blog-list.html#"><i class="ti-twitter-alt"></i></a>
+                                <a href="http://droitthemes.com/html/saasland/blog-list.html#"><i class="ti-vimeo-alt"></i></a>
+                                <a href="http://droitthemes.com/html/saasland/blog-list.html#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <ul class="list-unstyled f_menu text-right">
+                                <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Terms of Use</a></li>
+                                <li><a href="http://droitthemes.com/html/saasland/blog-list.html#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.2.1.min.js.download' %}"></script>
+    <script src="{% static 'js/propper.js.download' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js.download' %}"></script>
+    <script src="{% static 'js/wow.min.js.download' %}"></script>
+    <script src="{% static 'js/jquery.parallax-scroll.js.download' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js.download' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js.download' %}"></script>
+    <script src="{% static 'js/isotope-min.js.download' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js.download' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js.download' %}"></script>
+    <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js.download' %}"></script>
+    <script src="{% static 'js/plugins.js.download' %}"></script>
+    <script src="{% static 'js/slick.js.download' %}"></script>
+    <script src="{% static 'js/main.js.download' %}"></script>
+
+</body>
+</html>
